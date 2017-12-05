@@ -1,0 +1,36 @@
+<table class="table table-striped table-responsive table-bordered" id="tabela" ng-controller="chamada">
+    <thead class="danger">
+        <tr>
+            <th>
+                Presente
+            </th>
+            <th>
+                Nome do Aluno
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr type="hidden"></tr>
+        <tr ng-repeat="aluno in lista | limitTo:lista.length:1">
+            <td>
+                <label>
+                        <input class='inputChamadas' type="checkbox" id="check{{aluno.id}}" ng-change="atribuirPresenca(aluno.id)" ng-model="aluno.presente"/>
+                        Presente
+                </label>
+            </td>
+            <td>
+                <p class="infosTabela">{{aluno.nomeAluno}}</p>
+            </td>
+        </tr>
+        
+    </tbody>
+    <tfoot>
+        <tr>
+            <td><button id="botaoPresenca" class="btn btn-warning" ng-click="contabilizar()">Contabilizar presenca</button></td>
+            <td></td>
+            
+        </tr>
+        
+    </tfoot>
+    
+</table>

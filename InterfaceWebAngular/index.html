@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="listaChamada">
+
+<head>
+    <title>Todo List | Angular JS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-route.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <section class="content">
+                <h1 id="apresentacao"><b>Lista de chamada</b></h1>
+                <div class="col-md-12">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div id="conjuntoBotao">
+                                <a href="#!cadastroAluno" class="btn btn-primary btn-filter botoes">Cadastro Aluno</a>
+                                <a href="#!listaChamada" class="btn btn-primary btn-filter botoes">Lista Chamada</a>
+                                <a href="#!relatorio" class="btn btn-primary btn-filter botoes" >Relatório Presença</a>
+                            </div>
+                        </div>
+                        <div ng-view>Bem vindo ao sistema de presença da feito na aula de DW2</div>
+                    </div>
+                </div>
+                <div class="content-footer">
+                    <p>
+                        Page © - 2017 <br> Powered By Fundatec/DW2
+                    </p>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="javascript/app.js"></script>
+    <script src="javascript/taskServices.js"></script>
+    <script src="javascript/cadastro.js"></script>
+    <script src="javascript/chamada.js"></script>
+    <script src="javascript/relatorio.js"></script>
+</body>
+
+</html>
