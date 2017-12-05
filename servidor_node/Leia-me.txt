@@ -1,0 +1,1 @@
+Escreva 'npm install async' no cmd apontando para esta pasta, para baixar os node_modules
